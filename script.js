@@ -86,7 +86,6 @@ var updateEl = (
   var fiveDayForecastEl = document.getElementById('five-day-forecast');
 
   currentTemp.style.display = 'flex';
-  resetBtn.style.display = 'unset';
   fiveDayForecastEl.style.display = 'unset';
 
   // Declare a variable to hold the current date
@@ -144,13 +143,6 @@ function extractForecast(weekData){
 };
 
 // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
-// Upon clicking the reset button, the shortest function to clear everything would be to reload the application
-function resetData(){
-  location.reload();
-};
-var resetBtn = document.getElementById('reset');
-resetBtn.addEventListener('click', resetData);
-
 // Upon clicking the clear history button, clear the storage and reload the application
 function clearHistory(){
   localStorage.clear();
